@@ -1,0 +1,14 @@
+#配置数据
+spring:
+  datasource:
+    password: abc123
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://123.57.128.244:3306/db_jwt?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database: mysql
