@@ -45,8 +45,8 @@ public class JwtUtil {
 	}
 
 	public static void main(String[] args) {
-		//System.out.println(JwtUtil.sign("123","abc"));;
-		System.out.println(JwtUtil.verify("eyJhbGciOiJIUzI1NiIsIlR5cGUiOiJKd3QiLCJ0eXAiOiJKV1QifQ.eyJwYXNzd29yZCI6ImFiYyIsImV4cCI6MTU5NTE2MDY5OSwidXNlcm5hbWUiOiIxMjMifQ.Wj1t0oSWKQHGLRnmJy6jjL5VaEydFmlhs4Xslvei7wg"));
+		System.out.println(JwtUtil.sign(123L));;
+		System.out.println(JwtUtil.verify("eyJhbGciOiJIUzI1NiIsIlR5cGUiOiJKd3QiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE1OTU2NDYxMDcsInVzZXJJZCI6MTIzfQ.xUGQhld3EysLoe-z_XYQoIkfFLEbrZH36y5N4hTMfBg"));
 	}
 	
 	/**

@@ -3,3 +3,12 @@ server:
 spring:
   profiles:
     active: test
+  redis:
+    host: 123.57.128.244
+    port: 6379
+    password: abc123
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+    timeout: 1000
