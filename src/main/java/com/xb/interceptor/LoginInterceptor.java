@@ -42,7 +42,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         }else {
             requestStorage.setId(model.getId());
             Object o = redisTemplate.opsForValue().get("login:" + model.getId());
-            if (o == null){
+            if (o == null || (String) o != token){
                 return false;
             }
         }

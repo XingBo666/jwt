@@ -29,7 +29,7 @@ public class UserService {
 
         String token = JwtUtil.sign(user.getId());
         //  登陆成功，将token放入redis
-        redisTemplate.opsForValue().set("login:" + user.getId(),token);
+        redisTemplate.opsForValue().set("login:" + user.getId(),token,2 * 60);
 
         return BaseResult.success(token);
     }

@@ -16,7 +16,7 @@ public class BaseResult {
     private Long totalCount;
 
     /*
-    * 状态码，200成功，199失败，。。。。。
+    * 状态码，200成功，199失败，。。。。。100未授权
     * */
     private int code;
 
