@@ -10,6 +10,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
+import java.time.Duration;
 
 @Service
 public class UserService {
@@ -29,8 +30,12 @@ public class UserService {
 
         String token = JwtUtil.sign(user.getId());
         //  登陆成功，将token放入redis
-        redisTemplate.opsForValue().set("login:" + user.getId(),token,2 * 60);
+        redisTemplate.opsForValue().set("login:" + user.getId(),token, Duration.ofSeconds(20));
 
         return BaseResult.success(token);
+    }
+
+    public BaseResult findAllUser() {
+        return BaseResult.success("str");
     }
 }

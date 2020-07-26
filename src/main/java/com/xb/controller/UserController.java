@@ -23,8 +23,8 @@ public class UserController {
     }
 
     @RequestMapping("findAllUser")
-    public String findAllUser(){
-        return "findAllUser";
+    public BaseResult findAllUser(){
+        return userService.findAllUser();
     }
 
     @RequestMapping("registry")

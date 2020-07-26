@@ -3,6 +3,7 @@ package com.xb.util;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Getter
 @NoArgsConstructor
@@ -16,7 +17,7 @@ public class BaseResult {
     private Long totalCount;
 
     /*
-    * 状态码，200成功，199失败，。。。。。100未授权
+    * 状态码，200成功，199失败，。。。。。100未授权,500未知异常
     * */
     private int code;
 
@@ -30,6 +31,14 @@ public class BaseResult {
     * 返回数据
     * */
     private Object data;
+
+    public static BaseResult failureUnknown() {
+        return new BaseResult().setCode(500);
+    }
+
+    public static Object failureAuth() {
+        return new BaseResult().setCode(403).setMsg("没有权限，请重新登陆");
+    }
 
 
     public BaseResult setTotalCount(Long count){
